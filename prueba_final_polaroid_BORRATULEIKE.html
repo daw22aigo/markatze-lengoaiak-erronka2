@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>Liburu denda</title>
+    <style>
+
+        .prueba_polaroid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        #one {
+            grid-column: 1 / 3;
+            grid-row: 1;
+        }
+
+        #two {
+            grid-column: 2 / 4;
+            grid-row: 1 / 3;
+        }
+
+        #three {
+            grid-column: 1;
+            grid-row: 2 / 5;
+        }
+
+        #four {
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        #five {
+            grid-column: 2;
+            grid-row: 4;
+        }
+        
+        #six {
+            grid-column: 3;
+            grid-row: 4;
+        }
+
+        div.polaroid {
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            display: inline-block;
+            gap: 20px;
+            margin-left: 15px;
+            margin-top: 15px;
+            padding: 15px;
+            grid-template-columns: 15% 15% 15% 15%;
+            background-color: white;
+        }
+
+        div.polaroid img {
+            width: 100%;
+        }
+
+        div.container {
+            height: 30px;
+            padding: 10px;
+        }
+
+        .polaroid-aurrekoa img {
+            width: 100%;
+            width: 230px;
+            height: 400px;
+        }
+
+        .polaroid-txartela .container p{
+            font-size: 0.5em;
+        }
+        /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+        .polaroid-txartela {
+            background-color: transparent;
+            height: 400px;
+            perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .polaroid-barrukoa {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .polaroid-txartela:hover .polaroid-barrukoa {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .polaroid-aurrekoa, .polaroid-atzekoa {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .polaroid-aurrekoa {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .polaroid-atzekoa {
+            background-color: transparent;
+            color: black;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="sup">
+            <nav>
+                <a href="index.html">HASIERA</a>
+                <a href="katalogoa.html" class="bold">KATALOGOA</a>
+                <a href="nobedadeak.html">NOBEDADEAK</a>
+                <a href="eskaintzak.html">ESKAINTZAK</a>
+                <a href="kontaktua.html">KONTAKTUA</a>
+            </nav>
+            <div class="saskia">
+                <a href="saskia.html"><img src="assets/img/carro.png" alt="saskia"></a>
+            </div>
+        </div>
+
+        <div class="inf"></div>
+    </header>
+    <main>
+        <section class="prueba_polaroid">
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="one">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+                <button>Orain erosi</button>
+            </div>   
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="two">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="three">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="four">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="five">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="six">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="seven">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="eight">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div>   
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="nine">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div>   
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="ten">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="eleven">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="twelve">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela" id="thirteen">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div> 
+            <div class="polaroid">
+                <div class="polaroid-txartela">
+                    <div class="polaroid-barrukoa">
+                        <div class="polaroid-aurrekoa">
+                            <img src="assets/img/it.PNG" alt="">
+                        </div>
+                        <div class="polaroid-atzekoa">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus omnis voluptas blanditiis neque sint excepturi quidem maxime ab aut? Quia corrupti vel nulla quam provident dicta aliquam dolorum consequuntur a accusamus ducimus non expedita ratione ipsa dolore, nisi eos ab ex aliquid vitae officiis enim? Tempora autem ipsa quae delectus, sit sint atque, iste qui, doloribus eum tempore dignissimos rerum?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a href="https://www.todostuslibros.com/" target="_blank"><p>It, Stephen King</p></a>
+                </div>
+            </div>  
+        </section>
+    </main>
+    <footer>
+        <p>&copy 2022 Ainize</p>
+        <img src="assets/img/botonSubir.png" alt="Boton Subir">
+    </footer>
+</body>
+</html>

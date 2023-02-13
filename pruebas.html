@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title></title>
+            <style>
+                div {
+                    width: 100px;
+                    height: 100px;
+                    background-color: aqua;
+                }
+
+                .dos:hover {
+                    transform: rotate(90deg);
+                    transition: transform 1s;
+                    transition-timing-function: ease-in-out;
+                }
+
+                div.fondo {
+                    opacity: 0.5;
+                }
+            </style>
+        </head>
+        <body>
+            <!--POSIBLE CODIGO PARA LA CESTA DE LA COMPRA-->
+            <label for="numero1">Numero 1</label>
+            <input type="text" id="numero1" onchange="sumar();"><br>
+
+            <label for="numero2">Numero 2</label>
+            <input type="text" id="numero2" onchange="sumar();"><br>
+
+            <label for="resultado">Resultado</label>
+            <input type="text" id="resultado">
+
+            <script>
+                // si la respuesta que se espera es sumar
+                function sumar(){
+                    var numero1 = document.getElementById('numero1').value;
+                    var numero2 = document.getElementById('numero2').value;
+
+                    if(numero1!=='' && numero2!==''){
+                        var suma = parseInt(numero1)+parseInt(numero2);
+                        document.getElementById('resultado').value = suma;
+                    }
+                }
+            </script>
+            <!--FIN DE POSIBLE CODIGO PARA LA CESTA DE LA COMPRA-->
+
+            <p><div></div></p>
+            <p><div class="dos"></div></p>
+
+            <div class="fondo">
+                <img src="assets/img/liburuak_fondo.jpg" alt="">
+            </div>
+        </body>
+    </html>

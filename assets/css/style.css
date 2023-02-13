@@ -1,0 +1,598 @@
+/*_____________________CSS OROKORRA_______________________________*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+#top {
+    top: 0;
+}
+/*____!!!!!!!!!!!!!!HAU ONDO BEGIRATU!!!!!!!!!!!!!!!!!___*/
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+/*_____________________HEADER HASIERA_________HAU BERDINE DA ORRI GUZTIXETAN______________________*/
+
+#top {
+    top: 0;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: -200px;
+    background-image: url(../img/libros_fondo_negro.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+}
+
+    .goi {
+        width: 100%;
+        height: 160px;
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+        .ezk {
+            width: 10%;
+        }
+
+            .ezk h6 {
+                font-family: 'Amatic SC', cursive;
+                font-size: 1.5em;
+                color: white;
+                margin-top: -30px;
+                margin-left: 10px;
+            }
+
+            .ezk a {
+                text-decoration: none;
+            }
+
+            .ezk img {
+                width: 60%;
+                padding: 10px;
+            }
+        
+        .erd {
+            width: 70%;
+            height: 70px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+            nav {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            nav a {
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+            }
+            
+            nav a:hover {
+                color: gold;
+                font-size: 1.1em;
+            }
+            
+            .bold {
+                font-weight: bolder;
+                font-size: 1.2em;
+                color: gold;
+            }
+
+            .bold :hover{
+                font-size: 1.1em;
+            }
+
+        .esk {
+            width: 15%;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+            .esk a {
+                color: white;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.5em;
+            }
+
+            .esk a:hover {
+                text-decoration: dashed;
+            }
+
+            .esk img {
+                width: 20px;
+                height: 20px;
+            }
+
+    .behe {
+        color: white;
+        margin-top: 110px;
+    }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em;
+        }
+
+/*__________________HEADER AMAIERA___________________________*/
+
+/*__________________MAIN HASIERA___________________________*/
+
+main {
+    margin-top: 200px;
+}
+
+.mainHasiera {
+    width: 100%;
+    height: auto; /*Hau gero ajustatu */
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*____________MAIN BARRUKO SECTION_______________*/
+/*____EZKERREKOA____*/
+
+    .sect {
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        display: inline-block;
+        gap: 20px;
+        padding: 15px;
+    }
+
+        .sect section {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 3em;
+        }
+
+        .liburuak {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+            .liburuak p {
+                width: 90%;
+                text-align: center;
+                vertical-align: middle;
+                margin-top: 15px;
+            }
+
+            .liburuak img {
+                width: 40%;
+            }
+
+            .deskribapena {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+    .asideIndex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sidebarTwitter {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+/*____ESKUMAKOA____*/
+
+    .asideIndex {
+        width: 35%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 630px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-align: center;
+        /* display: inline-block; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+/*____________________MAIN AMAIERA_________________*/
+
+/*_________________KATALOGOA HASIERA______________________*/
+
+.katalogoa img {
+    width: 10%;
+}
+
+.prueba_polaroid {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+}
+
+#one {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+#two {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+
+#three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+}
+
+#four {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#five {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#six {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+div.polaroid {
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: inline-block;
+    gap: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    grid-template-columns: 15% 15% 15% 15%;
+    background-color: white;
+}
+
+div.polaroid img {
+    width: 100%;
+}
+
+div.container {
+    height: 30px;
+    padding: 10px;
+}
+
+.polaroid-aurrekoa img {
+    width: 100%;
+    width: 230px;
+    height: 400px;
+}
+
+.polaroid-txartela .container p{
+    font-size: 0.5em;
+}
+
+.polaroid-txartela {
+    background-color: transparent;
+    height: 400px;
+}
+
+.polaroid-barrukoa {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.5s;
+    transform-style: preserve-3d; 
+}
+
+.polaroid-txartela:hover .polaroid-barrukoa {
+    transform: rotateY(180deg);
+}
+
+.polaroid-aurrekoa, .polaroid-atzekoa {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.polaroid-aurrekoa {
+    background-color: #bbb;
+    color: black;
+}
+
+.polaroid-atzekoa {
+    background-color: transparent;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+/*__________________KATALOGOA AMAIERA__________________*/
+
+/*____________SASKIAREN ORRIA HASIERA______________*/
+
+.mainSaskia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .saskia {
+        width: 40%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .bakoitza {
+            width: 100%;
+            height: 175px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+            .argazkia{
+                width: 15%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .argazkia img{
+                    width: 70%;
+                }
+
+            .informazioa {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+        .guztira {
+            width: 100%;
+            height: 75px;
+            margin-top: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+/*____________SASKIAREN ORRIA AMAIERA_____________*/
+
+/*______________AZKEN ALBISTEAK__________________*/
+
+.sectAlbisteak {
+    width: 90%;
+    margin: 10px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    padding: 15px;
+}
+
+.albisteak {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.albisteak img{
+    width: 20%;
+}
+
+/*______________AZKEN ALBISTEAK AMAIERA__________________*/
+
+/*__________KONTAKTUA____________*/
+
+.mainKontaktua {
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*__________________FOOTER HASIERA________________________*/
+
+footer {
+    width: 100%;
+    height: 115px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0,0), rgb(255, 229, 83));
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer div {
+    width: 20%;
+    padding-left: 15px;
+}
+
+footer div p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.footerErdikoa {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logosRedes {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logoColor {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.logoColor > img:nth-child(2) {
+    display: none;
+}
+
+.logoColor:hover > img:nth-child(1){
+    display: none;
+}
+
+.logoColor:hover > img:nth-child(2) {
+    display: block;
+}
+
+.footerNav a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.footerNav a:hover {
+    font-weight: bold;
+}
+
+.footerGora a {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footerGora a img.giro {
+    width: 30%;
+    transition: transform .5s;
+}
+
+.footerGora a img.giro:hover {
+    transform: rotate(180deg);
+    transition-timing-function: linear;
+}
+
+.container {
+    height: 300px;
+    background: gold;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    font-family: Arial;
+    text-align: center;
+    font-size: 2em;
+    color: rgba(255,255,255, .8);
+}
+
+.waves {
+    position: absolute;
+/*      left: 0;
+    right: 0;
+    height: 200px;
+    bottom: 0;*/
+    bottom: -135px;
+    height: 527px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    left: -180px;
+    bottom: 0;
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*width: 100%;*/
+    /*border-radius: 50%;*/
+    /*background:rgba(0,0,0, .3);*/
+    width: 2402px;
+    height: 427px;
+    background: url(https://static.platzi.com/media/files/waves_c8551f5d-ecf6-4a81-ae1d-f3a0ad55ba10.png) center bottom no-repeat;
+    animation: 5s wave ease-in-out infinite alternate;
+}
+
+.wave.a {
+    background-position: 0 -854px;
+}
+
+.wave.b {
+    background-position: 0 -427px;
+    animation-delay: .6s;
+}
+
+.wave.c {
+    background-position: 0 0;
+    animation-delay: 1.2s;
+}
+/*.container {
+    position: absolute;
+}*/
+
+@keyframes wave {
+    0% {
+    transform: translate(0 , 0);
+    }
+    50% {
+    transform: translate(-80px, 30px);
+    }
+    100% {
+    transform: translate(160px, -60px);
+    }
+}
